@@ -19,7 +19,6 @@
 ### Задание 1
 
 Скриншоты тут homework-gitlab-hw/img/lesson1
----
 
 ### Задание 2
 
