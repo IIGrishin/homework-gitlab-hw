@@ -16,21 +16,35 @@
    
 Желаем успехов в выполнении домашнего задания!
    
-### Дополнительные материалы, которые могут быть полезны для выполнения задания
-
-Скриншоты тут homework-gitlab-hw/img/lesson1.png
----
-
 ### Задание 1
 
-https://github.com/IIGrishin/homework-gitlab-hw/commit/c7154575641f290301d07b35f9ed7c0c546f4897
-
+Скриншоты тут homework-gitlab-hw/img/lesson1
 ---
 
 ### Задание 2
 
-https://github.com/netology-code/sys-pattern-homework/commit/8058de10460977197458266ef157ca9e70b0fa54
+Скриншоты тут homework-gitlab-hw/img/lesson2
 
-### Задание 3
+.gitlab-ci.yml
 
-https://github.com/IIGrishin/homework-gitlab-hw/network
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: golang:1.17
+  script: 
+   - go test .
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+
+
+
+
+---
+
