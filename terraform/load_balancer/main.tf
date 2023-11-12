@@ -57,12 +57,12 @@ resource "yandex_lb_target_group" "foo" {
 
   target {
     subnet_id = "${yandex_vpc_subnet.subnet-1.id}"
-    address   = "192.168.10.3"
+    address   = yandex_compute_instance.vm-1[0].network_interface.0.ip_address
   }
 
   target {
     subnet_id = "${yandex_vpc_subnet.subnet-1.id}"
-    address   = "192.168.10.33"
+    address   = yandex_compute_instance.vm-1[1].network_interface.0.ip_address
   }
 
 }
